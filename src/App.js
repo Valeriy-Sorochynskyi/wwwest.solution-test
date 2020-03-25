@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import { checkAuthentication as checkAuth } from './redux/actions/actions';
 import { Home } from './components/Home';
 import { News } from './components/News';
@@ -17,7 +17,7 @@ function App({ checkAuthentication, isAuthenticated }) {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/wwwest.solution-test">
       <nav className="navbar navbar-dark bg-dark">
         <div className="container">
           <Link className="navbar-brand" to="/">
